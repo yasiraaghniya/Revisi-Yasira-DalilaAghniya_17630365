@@ -29,7 +29,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="">My Bimbel</a>
+                <img src="{{asset('img/kejaksaan.png')}}"  width="60" height="60" class="img-responsive">
+                <a class="navbar-brand" href="" style="font-size: 10pt" style="text-align: center">Sistem Informasi Surat Perintah</a>
                 <a class="navbar-brand hidden" href="./"></a>
             </div>
 
@@ -42,7 +43,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
                             <i class="menu-icon fa fa-file"></i>Data</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-arrow-right"></i><a href=" {{ url('datapegawai') }}">Pegawai</a></li>
+                            <li><i class="menu-icon fa fa-arrow-right"></i><a href=" {{ url('/datapegawai') }}">Pegawai</a></li>
                             <li><i class="menu-icon fa fa-arrow-right"></i><a href=" {{ url('izincuti') }} ">Surat Perintah Mengikuti Pelatihan</a></li>
                             <li><i class="menu-icon fa fa-arrow-right"></i><a href=" {{ url('izinbelajar') }} ">Surat Perintah melaksanakan Tugas</a></li>
                             <li><i class="menu-icon fa fa-arrow-right"></i><a href=" {{ url('izinsakit') }} ">Surat Perintah Melaksanakan Tugas</a></li>
@@ -66,6 +67,14 @@
             <div class="header-menu">
                 <div class="col-sm-7">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <table border="0">
+                        <tr>
+                            <td valign="center">
+                                <font style="font-size: 15pt" style="text-align: center" style="font-family: arial, sans-serif;">KEJAKSAAN TINGGI KALIMANTAN SELATAN</font>
+                            </td>
+                        </tr>
+                        
+                    </table>
                 </div>        
                 
             </div>

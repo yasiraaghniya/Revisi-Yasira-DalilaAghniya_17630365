@@ -15,7 +15,7 @@ class CreateTbpegawaisTable extends Migration
     {
         Schema::create('tbpegawais', function (Blueprint $table) {
             $table->id();
-            $table->string('nm_pegawai', 100);
+            $table->string('nama_pegawai', 100);
             $table->string('nip');
             $table->string('nrp');
             $table->string('tempatlhr', 50);

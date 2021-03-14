@@ -14,25 +14,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('main', ['title' => 'KEJAKSAAN TINGGI KALIMANTAN SELATAN']);
+    return view('home', ['title' => 'KEJAKSAAN TINGGI KALIMANTAN SELATAN']);
 });
 
-Route::get('home', function () {
-    return view('home');
+Route::get('/home', function () {
+    return view('home2');
 });
 
-Route::get('edulevels','EdulevelController@data');
-Route::get('edulevels/add','EdulevelController@add');
-Route::post('edulevels','EdulevelController@addProcess');
-Route::get('edulevels/edit/{id}','EdulevelController@edit');
-Route::patch('edulevels/{id}', 'EdulevelController@editProcess');
-Route::delete('edulevels/{id}', 'EdulevelController@delete');
+// Route::get('edulevels','EdulevelController@data');
+// Route::get('edulevels/add','EdulevelController@add');
+// Route::post('edulevels','EdulevelController@addProcess');
+// Route::get('edulevels/edit/{id}','EdulevelController@edit');
+// Route::patch('edulevels/{id}', 'EdulevelController@editProcess');
+// Route::delete('edulevels/{id}', 'EdulevelController@delete');
 
-Route::get('programs/trash','ProgramController@trash');
-Route::get('programs/restore/{id?}','ProgramController@restore');
-Route::get('programs/delete/{id?}','ProgramController@delete');
-Route::resource('programs', 'ProgramController');
+// Route::get('programs/trash','ProgramController@trash');
+// Route::get('programs/restore/{id?}','ProgramController@restore');
+// Route::get('programs/delete/{id?}','ProgramController@delete');
+// Route::resource('programs', 'ProgramController');
 
-//pegawai//
-// Route::get('programs/delete/{id?}','PegawaiController@delete');
-// Route::resource('programs', 'PegawaiController');
+//Pegawai
+Route::get('datapegawai/delete/{id?}', 'PegawaiController@delete');
+Route::get('/datapegawai/cetak', 'PegawaiController@cetak')->name('datapegawai/cetak');
+Route::get('datapegawai/edit/{id}','PegawaiController@edit');
+Route::get('/cetak-filter/{kantor}','PegawaiController@cetakFilter')->name('cetak-filter');
+Route::resource('datapegawai', 'PegawaiController');
